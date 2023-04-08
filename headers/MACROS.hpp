@@ -1,0 +1,11 @@
+#pragma once
+
+#define WINDOW_WIDTH 800
+#define WINDOW_HEIGHT 600
+#define FPS 60
+
+#define SPRITE_SIZE 20
+
+#define SNAKE_INITIAL_X 100
+#define SNAKE_INITIAL_Y 100
+#define SNAKE_INITIAL_SPEED 2
