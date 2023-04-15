@@ -12,12 +12,11 @@ sf::Vector2f Engine::randomiseLocation()
   
   // Generate x and y between 0 and WINDOW_WIDTH or WINDOW_HEIGHT, with a step of SPRITE_SIZE
   do
-    ret.x = std::rand() / ((RAND_MAX + 1u) / WINDOW_WIDTH);
+    ret.x = std::rand() / ((RAND_MAX + 1u) / (WINDOW_WIDTH - SPRITE_SIZE));
   while (int(ret.x) % SPRITE_SIZE);
   do
     ret.y = std::rand() / ((RAND_MAX + 1u) / (WINDOW_HEIGHT - SPRITE_SIZE));
   while (int(ret.y) % SPRITE_SIZE);
-  
   
   // Iterate through snake to avoid generating x and y on snake
   for (const SnakeSection& i: snake)

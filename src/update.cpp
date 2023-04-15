@@ -43,6 +43,11 @@ int Engine::update()
   if (!sf::FloatRect(sf::Vector2f(0, 0), sf::Vector2f(resolution)).contains(snake.front().getPosition()))
     return 1;
   
+  std::cout << '{';
+  for (auto& i: snake)
+    std::cout << '(' << i.getPosition().x << ", " << i.getPosition().y << ')' << ' ';
+  std::cout << "}\n";
+  
   for (std::list<SnakeSection>::iterator i = ++snake.begin(); i != snake.end(); i++)
     if (snake.front().getSprite().getGlobalBounds().intersects(i->getSprite().getGlobalBounds()))
       return 1;
@@ -55,6 +60,7 @@ int Engine::update()
   {
     appleGenerated = false;
     addSnakeSection();
+    speed += SNAKE_INCREMENT_SPEED;
   }
  
   timeSinceLastMove = sf::Time::Zero;
