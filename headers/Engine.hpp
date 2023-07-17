@@ -37,7 +37,7 @@ public:
   
   void newSnake();
   void addSnakeSection();
-  void addDirection(const Direction& newDirection);
+  void addDirection(const Direction newDirection);
   
   void generateApple();
   

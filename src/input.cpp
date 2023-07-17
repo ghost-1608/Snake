@@ -14,7 +14,7 @@ bool opposite(const Engine::Direction& d1, const Engine::Direction& d2)
   return false;
 }
 
-void Engine::addDirection(const Direction& newDirection)
+void Engine::addDirection(const Direction newDirection)
 {
   if (directionQueue.empty())
   {
