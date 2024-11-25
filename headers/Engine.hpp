@@ -18,7 +18,6 @@ private:
   // Window
   sf::Vector2i resolution;
   sf::RenderWindow window;
-  [[maybe_unused]] static const sf::Time timePerFrame;
   
   std::list<SnakeSection> snake;
   Direction snakeDirection;

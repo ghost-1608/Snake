@@ -2,8 +2,6 @@
 #include <ctime>
 #include "Engine.hpp"
 
-[[maybe_unused]] const sf::Time Engine::timePerFrame = sf::seconds(1.f/FPS);
-
 sf::Vector2f Engine::randomiseLocation()
 {
   sf::Vector2f ret;
